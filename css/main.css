@@ -1,9 +1,25 @@
+/* menu  */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+/* fin menu  */
+
+body{
+    font-family: montserrat;
+}
+
+
 .kanban{
     display: flex;
     padding: 30px;
     width: 750px;
-    background-color: aquamarine;
+    background-color: #34495e;
     border-radius: 5px;
+    /* margin-left: 300px;
+    margin-right: 400px; */
 }
 
 .kanban * {
@@ -28,7 +44,24 @@
 .kanban__column-title-One{
     margin-bottom: 20px;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    color: rgb(15, 51, 1);
+    user-select: none;
+}
+.kanban__column-title-tow{
+text-align: center;
+margin-bottom: 40px;
+margin-top: 40px;
+color: black;
+}
+.kanban__column-title-tow h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: white;
+}
+.kanban__column-title-One h1{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
     user-select: none;
 }
 
@@ -46,15 +79,16 @@
 }
 .kanban__dropzone--active{
     height: 20px;
-    background: rgba(0, 0, 0, 0.25);
+    /* background: rgba(230, 225, 225, 0.25); */
+    background: rgba(230, 225, 225, 0.25);
 }
 
 .kanban__add-item{
 width: 100%;
 padding: 10px 0;
 font-size: 16px;
-color: white;
-background: rgba(0, 0, 0, 0.1);
+color: black;
+background: white;
 border: none;
 border-radius: 5px;
 cursor: pointer;

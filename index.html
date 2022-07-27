@@ -1,46 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme/menu.css">
+    <link rel="stylesheet" href="css/theme/modal.css">
+    <link rel="stylesheet" href="css/theme/aside.css">
     <title>Clone Trello</title>
 </head>
+
 <body>
-    <div>
-        <h1>STIWAR MOSQUERA GARRIDO</h1>
+    <nav>
+        <label class="logo">STIWAR MOSQUERA G.</label>
+        <ul>
+            <li><a class="active" href="#">Agregar Tarea</a></li>
+        </ul>
+    </nav>
+
+    <div class="kanban__column-title-tow">
+        <h1>Tareas</h1>
     </div>
-    <div class="kanban__column-title-One">Tareas </div>
+    <!-- <div class="kanban__column-title-One">
+        <h1>STIWAR MOSQUERA GARRIDO</h1>
+    </div> -->
     <div class="kanban">
-        
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea por Hacer</div>
+
             <div class="kanban__items">
-                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
-                <div class="kanban__dropzone"></div>
+                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div class="kanban__dropzone" id=" "></div>
             </div>
-            <button class="kanban__add-item" type="button">+ Agregar Tarea</button>
+            <button class="kanban__add-item" type="button" id="btnNewTask">+ Agregar Tarea</button>
         </div>
-        <!-- Respesto a esta parte la voy a agregar por medio de JavaScritp - la pongo por referencia  -->
+
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea en Proceso</div>
             <div class="kanban__items">
-                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
-                <div class="kanban__dropzone"></div>
+                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div class="kanban__dropzone" id=" "></div>
             </div>
             <button class="kanban__add-item" type="button">+ Agregar Tarea</button>
         </div>
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea Finalizada</div>
             <div class="kanban__items">
-                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
-                <div class="kanban__dropzone"></div>
+                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div class="kanban__dropzone" id=" "></div>
             </div>
             <button class="kanban__add-item" type="button">+ Agregar Tarea</button>
         </div>
-        <!-- FIN Respesto a esta parte la voy a agregar por medio de JavaScritp - la pongo por referencia  -->
     </div>
-<script src="js/main.js" type="module"> </script>
+
+
+
+    <!-- modal  -->
+    <section class="modal">
+        <div class="modal_container">
+            <h2 class="modal_title"> + Agregar Tarea </h2>
+
+            <form class="controls_container" id="formNewTask">
+                <div class="row-form">
+                    <label for="titleTask" class="controls_title">Título:</label>
+                    <input id="titleTask" name="titleTask" type="text" class="controls"placeholder="Escribe un título descriptivo" />
+                </div>
+
+                <div class="row-form">
+                    <label for="responsibleTask" class="controls_title">Responsable:</label>
+                    <select name="responsibleTask" id="responsibleTask">
+                        <option value="">--Seleccionar--</option>
+                        <option value="Stiwar">Stiwar</option>
+                        <option value="Carlos">Carlos</option>
+                    </select>
+                </div>
+
+                <div class="row-form">
+                    <label for="detailsTask" class="controls_title">Descripción:</label>
+                    <textarea class="" name="detailsTask" id="detailsTask cols=" 3" rows="3"
+                        placeholder="Ingresa el detalle de la tarea"></textarea>
+                </div>
+
+                <div class="row-form">
+                    <label for="deadLineTask" class="controls_title">Plazo entrega:</label>
+                    <select name="deadLineTask" id="deadLineTask">
+                        <option value="">--Seleccionar--</option>
+                        <option value="1">1 día</option>
+                        <option value="2">2 días</option>
+                        <option value="7">1 semana</option>
+                    </select>
+                    <!-- <input type="date" name="deadLineTask" id="deadLineTask"> -->
+                </div>
+
+                <div class="row-form">
+                    <div class="">
+                        <button class="modal_on" type="submit">Guardar</button>
+                        <button class="modal_close" type="reset" id="btnCancelNewTask">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- fin modal  -->
+
+    <!-- recursos externos  -->
+
+    <script src="js/libraries/moment.js"> </script>
+    <script src="js/libraries/axios.js"> </script>
+    <script src="js/libraries/draggable.js"> </script>
+    <script src="js/libraries/hammer.js"> </script>
+
+
+    <!-- recursos internos  -->
+    <script src="js/helpers/toggleModal.js"></script>
+    <script src="js/helpers/date.js"></script>
+
+
+    <script src="js/main.js" type="module"> </script>
 </body>
+
 </html>
