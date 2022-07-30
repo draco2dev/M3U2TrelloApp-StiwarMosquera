@@ -18,6 +18,7 @@ body{
     width: 750px;
     background-color: #34495e;
     border-radius: 5px;
+    margin-left: 40px;
     /* margin-left: 300px;
     margin-right: 400px; */
 }
@@ -47,16 +48,20 @@ body{
     color: rgb(15, 51, 1);
     user-select: none;
 }
-.kanban__column-title-tow{
+/* .kanban__column-title-tow{
 text-align: center;
 margin-bottom: 40px;
 margin-top: 40px;
 color: black;
-}
+} */
 .kanban__column-title-tow h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 40px;
-    color: white;
+    /* text-align: center; */
+margin-bottom: 40px;
+margin-top: 40px;
+margin-left: 350px;
+    color: black;
 }
 .kanban__column-title-One h1{
     margin-bottom: 20px;
@@ -86,6 +91,7 @@ color: black;
 .kanban__add-item{
 width: 100%;
 padding: 10px 0;
+
 font-size: 16px;
 color: black;
 background: white;
@@ -93,3 +99,4 @@ border: none;
 border-radius: 5px;
 cursor: pointer;
 }
+

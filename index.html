@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/theme/form.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/theme/menu.css">
     <link rel="stylesheet" href="css/theme/modal.css">
@@ -13,6 +21,7 @@
 </head>
 
 <body>
+    
     <nav>
         <label class="logo">STIWAR MOSQUERA G.</label>
         <ul>
@@ -27,31 +36,34 @@
         <h1>STIWAR MOSQUERA GARRIDO</h1>
     </div> -->
     <div class="kanban">
+
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea por Hacer</div>
 
             <div class="kanban__items">
-                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
                 <div class="kanban__dropzone" id=" "></div>
             </div>
-            <button class="kanban__add-item" type="button" id="btnNewTask">+ Agregar Tarea</button>
+            
+            <!-- <button class="kanban__add-item " type="button" id="btnNewTask">+ Agregar Tarea</button> -->
+            <!-- <div class="kanban__add-item"> hola </div> -->
+            
         </div>
 
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea en Proceso</div>
             <div class="kanban__items">
-                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
                 <div class="kanban__dropzone" id=" "></div>
             </div>
-            <button class="kanban__add-item" type="button">+ Agregar Tarea</button>
         </div>
+
         <div class="kanban__column">
             <div class="kanban__column-title"> Tarea Finalizada</div>
             <div class="kanban__items">
-                <!-- <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div> -->
+                <div contenteditable class="kanban__items--input"> Tarea (Respectiva)</div>
                 <div class="kanban__dropzone" id=" "></div>
             </div>
-            <button class="kanban__add-item" type="button">+ Agregar Tarea</button>
         </div>
     </div>
 
@@ -60,47 +72,67 @@
     <!-- modal  -->
     <section class="modal">
         <div class="modal_container">
-            <h2 class="modal_title"> + Agregar Tarea </h2>
+            <section class="contact-box">
+                <div class="row no-gutters bg-dark">
 
-            <form class="controls_container" id="formNewTask">
-                <div class="row-form">
-                    <label for="titleTask" class="controls_title">Título:</label>
-                    <input id="titleTask" name="titleTask" type="text" class="controls"placeholder="Escribe un título descriptivo" />
-                </div>
+                    <div class="col-xl-12 col-lg-12 d-flex">
+                        <div class="container align-self-center p-6">
+                            <p class="font-weight-bold text-center">+ Agregar Tarea.</p>
+                            <form>
+                                <div class="form-row mb-2">
+                                    <div class="form-group col-md-6">
+                                        <label class="font-weight-bold">Título: <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Nombre de Tarea">
+                                    </div>
+                                    <div class="form-group col-md-6">
 
-                <div class="row-form">
-                    <label for="responsibleTask" class="controls_title">Responsable:</label>
-                    <select name="responsibleTask" id="responsibleTask">
-                        <option value="">--Seleccionar--</option>
-                        <option value="Stiwar">Stiwar</option>
-                        <option value="Carlos">Carlos</option>
-                    </select>
-                </div>
+                                        <label for="responsibleTask" class="font-weight-bold">Responsable:</label>
+                                        <select name="responsibleTask" id="responsibleTask" class="form-control">
+                                            <option value="">--Seleccionar--</option>
+                                            <option value="Stiwar">Stiwar</option>
+                                            <option value="Carlos">Carlos</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                <div class="row-form">
-                    <label for="detailsTask" class="controls_title">Descripción:</label>
-                    <textarea class="" name="detailsTask" id="detailsTask cols=" 3" rows="3"
-                        placeholder="Ingresa el detalle de la tarea"></textarea>
-                </div>
 
-                <div class="row-form">
-                    <label for="deadLineTask" class="controls_title">Plazo entrega:</label>
-                    <select name="deadLineTask" id="deadLineTask">
-                        <option value="">--Seleccionar--</option>
-                        <option value="1">1 día</option>
-                        <option value="2">2 días</option>
-                        <option value="7">1 semana</option>
-                    </select>
-                    <!-- <input type="date" name="deadLineTask" id="deadLineTask"> -->
-                </div>
+                                <div class="form-group mb-3">
+                                    <label for="detailsTask" class="font-weight-bold">Descripción: <span
+                                        class="text-danger">*</span></label>
+                                    <textarea class="form-control" name="detailsTask" id="detailsTask
+                                        placeholder="Ingresa el detalle de la tarea"></textarea>
+                                </div>
 
-                <div class="row-form">
-                    <div class="">
-                        <button class="modal_on" type="submit">Guardar</button>
-                        <button class="modal_close" type="reset" id="btnCancelNewTask">Cancelar</button>
+                                <div class="form-group mb-3">
+                                    <label for="deadLineTask" class="font-weight-bold">Plazo entrega: <span
+                                        class="text-danger">*</span></label>
+                                    <select name="deadLineTask" id="deadLineTask" class="form-control">
+                                        <option value="">--Seleccionar--</option>
+                                        <option value="1">1 día</option>
+                                        <option value="2">2 días</option>
+                                        <option value="7">1 semana</option>
+                                    </select>
+                              
+                                </div>
+                            
+
+                                <div class="form-row mb-2">
+                                    <div class="form-group col-md-6">
+                                        <button class=" btn btn-primary width-100 modal_on" type="submit">Guardar</button>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <button class=" btn btn-primary width-100 modal_close" type="reset" id="btnCancelNewTask">Cancelar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <!-- <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2019 Templune</small> -->
+                        </div>
                     </div>
                 </div>
-            </form>
+            </section>
+
         </div>
     </section>
     <!-- fin modal  -->
@@ -111,6 +143,12 @@
     <script src="js/libraries/axios.js"> </script>
     <script src="js/libraries/draggable.js"> </script>
     <script src="js/libraries/hammer.js"> </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 
 
     <!-- recursos internos  -->
