@@ -32,8 +32,8 @@ main {
 }
 
 .draggable--is-dragging {
-  /* background: #482; */
-  /* background: radial-gradient(rgb(185, 160, 160),#000000); */
+  background: #482;
+  background: radial-gradient(rgb(185, 160, 160),#000000);
 
 }
 

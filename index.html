@@ -21,8 +21,11 @@
     <link rel="stylesheet" href="css/theme/aside.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/kanban__Cards.css">
+    
 
     <link rel="stylesheet" href="css/utils/draggable.css">
+
+    <link rel="stylesheet" href="css/style.css">
    
 
 
@@ -48,14 +51,14 @@
         <div class="kanban">
             <div class="kanban__column">
                 <div class="kanban__column-title"> Tarea por Hacer</div>
-                <div class="elementoDro kanban__dropzone" id="todoTasks"></div>
+                <div class=" kanban__dropzone" id="todoTasks"></div>
                 <!-- <div class="kanban__items">
                     <div class="kanban__items--input"></div> 
                 </div> -->
             </div>
             <div class="kanban__column">
                 <div class="kanban__column-title"> Tarea en Proceso</div>
-                <div class="elementoDro kanban__dropzone" id="progressTasks"></div>
+                <div class="kanban__dropzone" id="progressTasks"></div>
                 <!-- <div class="kanban__items">
                  <div class="kanban__items--input"> </div> 
                 </div> -->
@@ -63,16 +66,15 @@
             </div>
             <div class="kanban__column">
                 <div class="kanban__column-title"> Tarea Finalizada</div>
-                <div class="elementoDro kanban__dropzone" id="doneTasks"></div>
+                <div class="kanban__dropzone" id="doneTasks"></div>
                 <!-- <div class="kanban__items"> 
                     <div class="kanban__items--input"></div>
                      <div class="kanban__dropzone" id="doneTasks"></div> 
                 </div> -->
-                
             </div>
         </div>
     </main>
-    
+
     <!-- modal  -->
     <section class="modal" id="modalNewTask">
         <div class="modal_container">
@@ -156,6 +158,7 @@
     <script src="js/helpers/newTask.js"></script>
     <script src="js/helpers/toggleModal.js"></script>
     <script src="js/helpers/date.js"></script>
+    <script  src="js/helpers/dragganDrops.js"> </script>
 
 
     <script src="js/main.js" type="module"> </script>

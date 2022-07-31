@@ -1,19 +1,20 @@
 .card-task 
 {
-  padding: var(--gutter);
-  box-shadow: var(--box-shadow-sm);
-  border-radius: var(--border-radius-md);
-  /* transition: var(--duration-transition-base); */
-  cursor: pointer;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  width: 100%;
+  
+padding: var(--gutter);
+box-shadow: var(--box-shadow-sm);
+border-radius: var(--border-radius-md);
+/* transition: var(--duration-transition-base); */
+cursor: pointer;
+margin-top: 30px;
+margin-bottom: 10px;
+width: 100%;
 padding: 1px 0;
 font-size: 16px;
 border: none;
 border-radius: 5px;
 /* border: solid 1px white;  */
-background: #111111bd;
+/* background: #111111bd; */
 }
 
 .card-task:hover
