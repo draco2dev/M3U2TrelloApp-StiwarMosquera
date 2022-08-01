@@ -26,6 +26,11 @@ body{
 .kanban * {
     font-family: sans-serif;
 }
+.spc{
+    margin-top: 20px;
+    color: blue;
+    display: flex;
+}
 
 .kanban__column{
     /* flex: 1; */
@@ -85,16 +90,18 @@ margin-left: 350px;
 }
 
 .kanban__dropzone{
-flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--gutter);
-  box-shadow: var(--box-shadow-lg);
+  /* box-shadow: var(--box-shadow-lg); */
   padding: var(--gutter);
   background-color: var(--c-background-light);
   border-radius: var(--border-radius-md);
-
+/* border: solid white 20px; */
 }
+
+
 .kanban__dropzone--active{
     height: 20px;
     /* background: rgba(230, 225, 225, 0.25); */
@@ -102,7 +109,7 @@ flex: 1;
 }
 
 .kanban__add-item{
-width: 100%;
+width: 50%;
 padding: 10px 0;
 font-size: 16px;
 color: black;

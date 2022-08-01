@@ -1,6 +1,5 @@
 .card-task 
 {
-  
 padding: var(--gutter);
 box-shadow: var(--box-shadow-sm);
 border-radius: var(--border-radius-md);
@@ -13,7 +12,7 @@ padding: 1px 0;
 font-size: 16px;
 border: none;
 border-radius: 5px;
-/* border: solid 1px white;  */
+border: solid 1px white; 
 /* background: #111111bd; */
 }
 
